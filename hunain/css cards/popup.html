@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+</head>
+<style>
+
+body{
+	background: rgb(255, 255, 255);
+    color: #fff;
+}
+.wrapper{
+    padding: 5px 5%;
+}
+#card-area{
+    margin-top: 30px;
+	margin-bottom: 30px;
+}
+.box-area{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+.box {
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 3px 3px 10px rgba(0,0,0,0.6);
+}
+.box img{
+    width: 100%;
+	height: 380px;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.overlay {
+	width: 100%;
+	height: 0;
+	background: linear-gradient(transparent,#1c1c1c 58%);
+	border-radius: 10px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	font-size: 13px;
+	transition: height 0.5s;
+}
+.overlay h3 {
+	font-weight: 500;
+	margin-bottom: 5px;
+	margin-top: 80%;
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 30px;
+	letter-spacing: 2px;
+}
+.overlay p{
+	font-size: 20px;
+}
+#card-btn{
+	margin-top: 8px;
+	color: #262626;
+	text-decoration: none;
+	font-size: 14px;
+	background: #fff;
+	border-radius: 40px;
+	text-align: center;
+	padding: 4px 12px;
+}
+#card-btn:hover {
+	margin-top: 10px;
+	color: #000000;
+	text-decoration: none;
+	font-size: 15px;
+	background: #8bc73f;
+	border-radius: 60px;
+	text-align: center;
+	padding: 5px 15px;
+}
+.box:hover img{
+    transform: scale(1.1);
+}
+.box:hover .overlay{
+    height: 100%;
+}
+
+</style>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <div class="container-fluid" id="card-area">
+        <div class="wrapper">
+            <div class="box-area"> 
+                <div class="box">
+                    <img src="img/1.gif" alt="">
+                    <div class="overlay">
+                        <h3>Ocean Plant</h3>
+                         <p>Rs:  1080</p>
+                        <button id="card-btn" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="img/3.gif" alt="">
+                    <div class="overlay">
+                        <h3>Rose Flower</h3>
+                        <p>Rs:  1300</p>
+                        <button id="card-btn" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="img/4.gif" alt="">
+                    <div class="overlay">
+                        <h3>Lily flower</h3>
+                        <p>Rs:  1600</p>
+                        <button id="card-btn" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="img/2.gif" alt="">
+                    <div class="overlay">
+                        <h3>Daffodils Flower</h3>
+                        <p>Rs:  1900</p>
+                        <button id="card-btn" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+
+  
+  <!-- Modal 1 -->
+  <div class="modal modal-dialog-scrollable" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content text-dark">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel1">OCEAN PLANT</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/1.gif" alt="modal-img" style="width: 300px; height: 320px; border-radius: 30px; margin-left: 80px;">
+          <br>
+          <h6><strong><i><b style="color: red; font-size: 30px;">RS: 1080.00</b></i></strong>   &nbsp; &nbsp; <del style="font-size: 20px;">RS:1200.00</del> (10% OFF)</h6>
+          <p><b>Sold By</b> : <i style="color: #8bc73f;">Green Nursery</i> &nbsp; | &nbsp; <b>Status</b> : <i style="color: #8bc73f;">in Stock</i></p>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn" style="border-radius: 20px; background-color: #000; color: #fff;">Add to Cart</button>
+          &nbsp; &nbsp;
+          <button type="button" class="btn" style="border-radius: 20px; background-color: #8bc73f; color: #000;">Buy now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   
+  <!-- Modal 2 -->
+  <div class="modal modal-dialog-scrollable" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content text-dark">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel2">ROSE FLOWER</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/3.gif" alt="modal-img" style="width: 300px; height: 320px; border-radius: 30px; margin-left: 80px;">
+          <br>
+          <h6><strong><i><b style="color: red; font-size: 30px;">RS: 1300.00</b></i></strong>   &nbsp; &nbsp; <del style="font-size: 20px;">RS:1560.00</del> (20% OFF)</h6>
+          <p><b>Sold By</b> : <i style="color: #8bc73f;">Green Nursery</i> &nbsp; | &nbsp; <b>Status</b> : <i style="color: #8bc73f;">in Stock</i></p>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn" style="border-radius: 20px; background-color: #000; color: #fff;">Add to Cart</button>
+          &nbsp; &nbsp;
+          <button type="button" class="btn" style="border-radius: 20px; background-color: #8bc73f; color: #000;">Buy now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   
+  <!-- Modal 3 -->
+  <div class="modal modal-dialog-scrollable" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content text-dark">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel3">LILY FLOWER</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/4.gif" alt="modal-img" style="width: 300px; height: 320px; border-radius: 30px; margin-left: 80px;">
+          <br>
+          <h6><strong><i><b style="color: red; font-size: 30px;">RS: 1600.00</b></i></strong>   &nbsp; &nbsp; <del style="font-size: 20px;">RS:1840.00</del> (15% OFF)</h6>
+          <p><b>Sold By</b> : <i style="color: #8bc73f;">Green Nursery</i> &nbsp; | &nbsp; <b>Status</b> : <i style="color: #8bc73f;">in Stock</i></p>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn" style="border-radius: 20px; background-color: #000; color: #fff;">Add to Cart</button>
+          &nbsp; &nbsp;
+          <button type="button" class="btn" style="border-radius: 20px; background-color: #8bc73f; color: #000;">Buy now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   
+  <!-- Modal 4 -->
+  <div class="modal modal-dialog-scrollable" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content text-dark">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel4">DAFFODILS FLOWER</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/2.gif" alt="modal-img" style="width: 300px; height: 320px; border-radius: 30px; margin-left: 80px;">
+          <br>
+          <h6><strong><i><b style="color: red; font-size: 30px;">RS: 1900.00</b></i></strong>   &nbsp; &nbsp; <del style="font-size: 20px;">RS:2090.00</del> (10% OFF)</h6>
+          <p><b>Sold By</b> : <i style="color: #8bc73f;">Green Nursery</i> &nbsp; | &nbsp; <b>Status</b> : <i style="color: #8bc73f;">in Stock</i></p>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn" style="border-radius: 20px; background-color: #000; color: #fff;">Add to Cart</button>
+          &nbsp; &nbsp;
+          <button type="button" class="btn" style="border-radius: 20px; background-color: #8bc73f; color: #000;">Buy now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
